@@ -77,8 +77,8 @@ They are grouped into the following sections.
 ### Matrix Math
 |                           | ArrayFire (C++)              | ArrayFire (Python)                   |
 | :------------------------ | :--------------------------: | :----------------------------------: |
-| Upper Triangular Matrix   | lower(A)                     | af.lower(A)                          |
-| Lower Triangular Matrix   | upper(A)                     | af.upper(A)                          |
+| Lower Triangular Matrix | lower(A)                     | af.lower(A)                          |
+| Upper Triangular Matrix | upper(A)                     | af.upper(A)                          |
 | Rank                      | rank(A)                      |                                      |
 | Determinant               | det\<float\>(A)                | af.det(A)                            |
 | Euclid  norm              | norm(A)                      | af.norm(A, af.NORM.EUCLID)           |

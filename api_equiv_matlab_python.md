@@ -82,8 +82,8 @@ They are grouped into the following sections.
 ### Matrix Math
 |                          | ArrayFire (C++)            | Matlab         | Python (numpy, scipy)       |
 | :----------------------- | :-----------------------:  | :------------: | :-------------------------: |
-| Upper Triangular         | lower(R)                   | tril(R)        | np.tril(R)                  |
-| Lower Triangular         | upper(R)                   | triu(R)        | np.triu(R)                  |
+| Lower Triangular    | lower(R)                   | tril(R)        | np.tril(R)                  |
+| Upper Triangular    | upper(R)                   | triu(R)        | np.triu(R)                  |
 | Rank                     | rank(R)                    | rank(R)        | rank(a)                     |
 | Determinant              | det\<float\>(R)              | det(R)         | la.det(a)                   |
 | Euclid  norm             | norm(R)                    | norm(R)        | la.norm(R)                  |

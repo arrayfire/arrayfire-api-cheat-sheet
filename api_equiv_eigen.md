@@ -86,8 +86,8 @@ They are grouped into the following sections.
 ### Matrix Math
 |                              | ArrayFire (C++)              | Eigen (C++)                                                                   |
 | :--------------------------- | :------------------------:   | :----------------------------:                                                |
-| Triangular,  upper           | lower(R)                     |                                                                               |
-| Triangular,  lower           | upper(R)                     |                                                                               |
+| Triangular, lower      | lower(R)                     |                                                                               |
+| Triangular,  upper      | upper(R)                     |                                                                               |
 | Rank                         | rank(R)                      |                                                                               |
 | Determinant                  | det\<float\>(R)                | R.determinant()                                                               |
 | Euclid  norm                 | norm(R)                      | R.squaredNorm()                                                               |
