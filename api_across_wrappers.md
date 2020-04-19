@@ -80,7 +80,7 @@ They are grouped into the following sections.
 | Upper Triangular Matrix   | lower(A)                     | af.lower(A)                          |
 | Lower Triangular Matrix   | upper(A)                     | af.upper(A)                          |
 | Rank                      | rank(A)                      |                                      |
-| Determinant               | det<float>(A)                | af.det(A)                            |
+| Determinant               | det\<float\>(A)                | af.det(A)                            |
 | Euclid  norm              | norm(A)                      | af.norm(A, af.NORM.EUCLID)           |
 | L1 norm                   | norm(A, AF_NORM_VECTOR_1)    | af.norm(A, af.NORM.MATRIX.1)         |
 | L2 norm                   | norm(A, AF_NORM_VECTOR_2)    | af.norm(A, af.NORM.MATRIX.2)         |
@@ -104,25 +104,25 @@ They are grouped into the following sections.
 | :-------------------------------- | :----------------------: | :-------------------: |
 | Sums of columns                   | sum(A)                   | af.sum(A, 0)          |
 | Sums of rows                      | sum(A, 1)                | af.sum(A, 1)          |
-| Sums of all elem.                 | sum<float>(A)            | af.sum(A)             |
+| Sums of all elem.                 | sum\<float\>(A)            | af.sum(A)             |
 | Products of columns               | product(A)               | af.product(A, 0)      |
 | Products of rows                  | product(A, 1)            | af.product(A, 1)      |
-| Products of all elem.             | product<float>(A)        | af.product(A)         |
+| Products of all elem.             | product\<float\>(A)        | af.product(A)         |
 | Averages of columns               | mean(A)                  | af.mean(A, dim=0)     |
 | Averages of rows                  | mean(A, 1)               | af.mean(A, dim=1)     |
-| Averages of all elem.             | mean<float>(A)           | af.mean(A)            |
+| Averages of all elem.             | mean\<float\>(A)           | af.mean(A)            |
 | Maximum of columns                | max(A)                   | af.max(A, dim=0)      |
 | Maximum of rows                   | max(A, 1)                | af.max(A, dim=1)      |
-| Maximum of all elem.              | max<float>(A)            | af.max(A)             |
+| Maximum of all elem.              | max\<float\>(A)            | af.max(A)             |
 | Minimum of columns                | min(A)                   | af.min(A, dim=0)      |
 | Minimum of rows                   | min(A, 1)                | af.min(A, dim=1)      |
-| Minimum of all elem.              | min<float>(A)            | af.min(A)             |
+| Minimum of all elem.              | min\<float\>(A)            | af.min(A)             |
 | Variance  of columns              | var(A, 1, 0)             |                       |
 | Variance  of rows                 | var(A, 1, 1)             |                       |
-| Variance s of all elem.           | var<float>(A)            | var(A)                |
+| Variance s of all elem.           | var\<float\>(A)            | var(A)                |
 | Stand. deviations of columns      | stdev(A)                 |                       |
 | Stand. deviations of rows         | stdev(A, 1)              |                       |
-| Stand. deviations of all elem.    | stdev<float>(A)          | af.stdev(A)           |
+| Stand. deviations of all elem.    | stdev\<float\>(A)          | af.stdev(A)           |
 
 ### Basic Math
 |                     | ArrayFire (C++)   | ArrayFire (Python)   |
