@@ -57,10 +57,10 @@ They are grouped into the following sections.
 |                               | R(seq(i, end), seq(j, end))               | P.col(j)                               |
 |                               | R(seq(i, end), span)                      |                                        |
 |                               | R(seq(i1, i2), seq(j1, j2))               | P.block(i1,  j1,  rows,  cols)         |
-|                               | R(seq(i1, i2, step1), seq(j1, j2, step2)) | P.rightCols<cols>()  P.rightCols(cols) |
-|                               |                                           | P.leftCols<cols>() P.leftCols(cols)    |
-| i+1 row                       | R.row(i)                                  | P.topRows<rows>() P.topRows(rows)      |
-| i+1 to j+1 rows               | R.rows(i, j)                              | P.bottomRows<rows>()P.bottomRows(rows) |
+|                               | R(seq(i1, i2, step1), seq(j1, j2, step2)) | P.rightCols\<cols\>()  P.rightCols(cols) |
+|                               |                                           | P.leftCols\<cols\>() P.leftCols(cols)    |
+| i+1 row                       | R.row(i)                                  | P.topRows\<rows\>() P.topRows(rows)      |
+| i+1 to j+1 rows               | R.rows(i, j)                              | P.bottomRows\<rows\>()P.bottomRows(rows) |
 | i+1 column                    | R.col(i)                                  |                                        |
 | i+1 to j+1 columns            | R.cols(i, j)                              |                                        |
 | i+1 slice                     | R3D.slice(i)                              |                                        |
@@ -86,15 +86,15 @@ They are grouped into the following sections.
 ### Matrix Math
 |                              | ArrayFire (C++)              | Eigen (C++)                                                                   |
 | :--------------------------- | :------------------------:   | :----------------------------:                                                |
-| Triangular,  upper           | lower(R)                     |                                                                               |
-| Triangular,  lower           | upper(R)                     |                                                                               |
+| Triangular, lower      | lower(R)                     |                                                                               |
+| Triangular,  upper      | upper(R)                     |                                                                               |
 | Rank                         | rank(R)                      |                                                                               |
-| Determinant                  | det<float>(R)                | R.determinant()                                                               |
+| Determinant                  | det\<float\>(R)                | R.determinant()                                                               |
 | Euclid  norm                 | norm(R)                      | R.squaredNorm()                                                               |
-| L1 norm                      | norm(R, AF_NORM_VECTOR_1)    | R.lpNorm<1>()                                                                 |
-| L2 norm                      | norm(R, AF_NORM_VECTOR_2)    | R.lpNorm<2>()                                                                 |
-| L4 norm                      | norm(R, AF_NORM_VECTOR_P_4)  | R.lpNorm<4>()                                                                 |
-| L.inf norm                   | norm(R, AF_NORM_VECTOR_INF)  | R.lpNorm<Infinity>()                                                          |
+| L1 norm                      | norm(R, AF_NORM_VECTOR_1)    | R.lpNorm\<1\>()                                                                 |
+| L2 norm                      | norm(R, AF_NORM_VECTOR_2)    | R.lpNorm\<2\>()                                                                 |
+| L4 norm                      | norm(R, AF_NORM_VECTOR_P_4)  | R.lpNorm\<4\>()                                                                 |
+| L.inf norm                   | norm(R, AF_NORM_VECTOR_INF)  | R.lpNorm\<Infinity\>()                                                          |
 | Addition                     | A1+A2                        | R.array() += s                                                                |
 |                              |                              | R = P.array() + s.array() s is scale                                          |
 |                              |                              | R  = P + Q R += Q                                                             |
@@ -115,7 +115,7 @@ They are grouped into the following sections.
 | LU                           | lu(out,  pivot,  A)          | .lu()   -> .matrixL() and .matrixU()                                          |
 | Cholesky factorization       | cholesky(R, A, true)         |                                                                               |
 | QR                           | qr(Q, R, tau, A)             | R.qr()   -> .matrixQ() and .matrixR()                                         |
-| Singular values              | svd(U, s, Vt, A)             | BDCSVD JacobiSVD<Eigen::MatrixXf> svd(A,  ComputeThinU . ComputeThinV )       |
+| Singular values              | svd(U, s, Vt, A)             | BDCSVD JacobiSVD\<Eigen::MatrixXf\> svd(A,  ComputeThinU . ComputeThinV )       |
 |                              |                              | auto svd = A.bdcSvd(ComputeThinU . ComputeThinV);                             |
 |                              |                              | svd.matrixU() . svd.singularValues().asDiagonal() . svd.matrixV().transpose() |
 
@@ -124,25 +124,25 @@ They are grouped into the following sections.
 | :---------------------------   | :------------------: | :----------------------: |
 | Sums of columns                | sum(A1)              | R.colwise().sum()        |
 | Sums of rows                   | sum(A1, 1)           | R.rowwise().sum()        |
-| Sums of all elem.              | sum<float>(A1)       | R.sum()                  |
+| Sums of all elem.              | sum\<float\>(A1)       | R.sum()                  |
 | Products of columns            | product(A1)          | R.colwise().prod()       |
 | Products of rows               | product(A1, 1)       | R.rowwise().prod()       |
-| Products of all elem.          | product<float>(A1)   | R.prod()                 |
+| Products of all elem.          | product\<float\>(A1)   | R.prod()                 |
 | Averages of columns            | mean(A1)             | R.colwise().mean()       |
 | Averages of rows               | mean(A1, 1)          | R.rowwise().mean()       |
-| Averages of all elem.          | mean<float>(A1)      | R.mean()                 |
+| Averages of all elem.          | mean\<float\>(A1)      | R.mean()                 |
 | Maximum of columns             | max(A1)              | R.colwise().maxCoeff()   |
 | Maximum of rows                | max(A1, 1)           | R.rowwise().maxCoeff()   |
-| Maximum of all elem.           | max<float>(A1)       | R.maxCoeff()             |
+| Maximum of all elem.           | max\<float\>(A1)       | R.maxCoeff()             |
 | Minimum of columns             | min(A1)              | R.colwise().minCoeff()   |
 | Minimum of rows                | min(A1, 1)           | R.rowwise().minCoeff()   |
-| Minimum of all elem.           | min<float>(A1)       | R.minCoeff()             |
+| Minimum of all elem.           | min\<float\>(A1)       | R.minCoeff()             |
 | Variance  of columns           | var(A1, 1, 0)        |                          |
 | Variance  of rows              | var(A1, 1, 1)        |                          |
-| Variance s of all elem.        | var<float>(A1)       |                          |
+| Variance s of all elem.        | var\<float\>(A1)       |                          |
 | Stand. deviations of columns   | stdev(A1)            |                          |
 | Stand. deviations of rows      | stdev(A1, 1)         |                          |
-| Stand. deviations of all elem. | stdev<float>(A1)     |                          |
+| Stand. deviations of all elem. | stdev\<float\>(A1)     |                          |
 
 ### Basic Math
 |                              | ArrayFire (C++)            | Eigen (C++)                    |

@@ -82,10 +82,10 @@ They are grouped into the following sections.
 ### Matrix Math
 |                          | ArrayFire (C++)            | Matlab         | Python (numpy, scipy)       |
 | :----------------------- | :-----------------------:  | :------------: | :-------------------------: |
-| Upper Triangular         | lower(R)                   | tril(R)        | np.tril(R)                  |
-| Lower Triangular         | upper(R)                   | triu(R)        | np.triu(R)                  |
+| Lower Triangular    | lower(R)                   | tril(R)        | np.tril(R)                  |
+| Upper Triangular    | upper(R)                   | triu(R)        | np.triu(R)                  |
 | Rank                     | rank(R)                    | rank(R)        | rank(a)                     |
-| Determinant              | det<float>(R)              | det(R)         | la.det(a)                   |
+| Determinant              | det\<float\>(R)              | det(R)         | la.det(a)                   |
 | Euclid  norm             | norm(R)                    | norm(R)        | la.norm(R)                  |
 | L1 norm                  | norm(R,AF_NORM_VECTOR_1)   | norm(R,1)      | la.norm(R,1)                |
 | L2 norm                  | norm(R,AF_NORM_VECTOR_2)   | norm(R,2)      | la.norm(R,2)                |
@@ -112,25 +112,25 @@ They are grouped into the following sections.
 | :----------------------------  | :-------------------: | :----------------------: | :---------------------: |
 | Sums of columns                | sum(A1)               | sum(A1) sum(A1, 1)       | np.sum(A1, 0)           |
 | Sums of rows                   | sum(A1, 1)            | sum(A1, 2)               | np.sum(A1, 1)           |
-| Sums of all elem.              | sum<float>(A1)        | sum(A1, 'all')           | np.sum(A1)              |
+| Sums of all elem.              | sum\<float\>(A1)        | sum(A1, 'all')           | np.sum(A1)              |
 | Products of columns            | product(A1)           | prod(A1) prod(A1, 1)     | np.prod(A1, 0)          |
 | Products of rows               | product(A1, 1)        | prod(A1, 2)              | np.prod(A1, 1)          |
-| Products of all elem.          | product<float>(A1)    | prod(A1, 'all')          | np.prod(a)              |
+| Products of all elem.          | product\<float\>(A1)    | prod(A1, 'all')          | np.prod(a)              |
 | Averages of columns            | mean(A1)              | mean(A1) mean(A1, 1)     | np.mean(A1, 0)          |
 | Averages of rows               | mean(A1, 1)           | mean(A1, 2)              | np.mean(A1, 1)          |
-| Averages of all elem.          | mean<float>(A1)       | mean(A1, 'all')          | np.mean(A1)             |
+| Averages of all elem.          | mean\<float\>(A1)       | mean(A1, 'all')          | np.mean(A1)             |
 | Maximum of columns             | max(A1)               | max(A1) max(A1, 1)       | np.max(A1, 0)           |
 | Maximum of rows                | max(A1, 1)            | max(A1, 2)               | np.max(A1, 1)           |
-| Maximum of all elem.           | max<float>(A1)        | max(A1, 'all')           | np.max(A1)              |
+| Maximum of all elem.           | max\<float\>(A1)        | max(A1, 'all')           | np.max(A1)              |
 | Minimum of columns             | min(A1)               | min(A1) min(A1, 1)       | np.min(A1, 0)           |
 | Minimum of rows                | min(A1, 1)            | min(A1, 2)               | np.min(A1, 1)           |
-| Minimum of all elem.           | min<float>(A1)        | min(A1, 'all')           | np.min(A1)              |
+| Minimum of all elem.           | min\<float\>(A1)        | min(A1, 'all')           | np.min(A1)              |
 | Variance  of columns           | var(A1, 1, 0)         | var(A1) var(A1, 0, 1)    |                         |
 | Variance  of rows              | var(A1, 1, 1)         | var(A1, 0, 2)            |                         |
-| Variance s of all elem.        | var<float>(A1)        | var(A1, 0, 'all')        | np.var(x)               |
+| Variance s of all elem.        | var\<float\>(A1)        | var(A1, 0, 'all')        | np.var(x)               |
 | Stand. deviations of columns   | stdev(A1)             | std(A1, 1, 1)            |                         |
 | Stand. deviations of rows      | stdev(A1, 1)          | std(A1, 1, 2)            |                         |
-| Stand. deviations of all elem. | stdev<float>(A1)      | std(A1, 1, 'all')        | np.std(x)               |
+| Stand. deviations of all elem. | stdev\<float\>(A1)      | std(A1, 1, 'all')        | np.std(x)               |
 
 ### Basic Math
 |                      | ArrayFire (C++)    | Matlab       | Python (numpy, scipy)   |
