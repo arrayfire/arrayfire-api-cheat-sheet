@@ -69,8 +69,8 @@ They are grouped into the following sections.
 | Conjugate Transposition       | R.H()                     | R'                          | R.conj().T                                  |
 | Non-conjugate transpose       | R.T()                     | R.'                         | R.T                                         |
 | Conjugate of array values     | conjg(R)                  | conj(R)                     | np.conj                                     |
-| Flip left-right               | flip(R, 0)                | fliplr(R)                   | np.fliplr(R)                                |
-| Flip up-down                  | flip(R, 1)                | flipud(R)                   | np.flipud(R)                                |
+| Flip left-right               | flip(R, 1)                | fliplr(R)                   | np.fliplr(R)                                |
+| Flip up-down                  | flip(R, 0)                | flipud(R)                   | np.flipud(R)                                |
 | Repeat matrix                 | tile(R, i, j)             | repmat(R, i, j)             | np.tile(R, (i, j))                          |
 | Swap axis                     | reorder(R, 1, 0)          | permute(R, [2, 1])          | arr.transpose(2, 1, 0) arr.swapaxes(2, 1)   |
 | Bind columns                  | join(1, A1, A2)           | [A1;A2] vertcat(A1, A2)     | vstack((a, b)) concatenate((a, b),  axis=0) |
